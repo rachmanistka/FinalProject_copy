@@ -18,5 +18,5 @@ class ProductPage(BasePage):
     def should_match_with_cost(self):
         cost_in_message = self.browser.find_element(*ProductPageLocators.COST_IN_MESSAGE).text
         real_cost = self.browser.find_element(*ProductPageLocators.REAL_COST).text
-        print(f"answer: {real_cost}")
         assert cost_in_message==real_cost, "Cost doesn't match"
+    

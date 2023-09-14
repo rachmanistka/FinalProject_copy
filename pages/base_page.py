@@ -22,6 +22,7 @@ class BasePage():
         answer = str(math.log(abs((12 * math.sin(float(x))))))
         alert.send_keys(answer)
         alert.accept()
+        '''
         try:
             alert = self.browser.switch_to.alert
             alert_text = alert.text
@@ -29,3 +30,4 @@ class BasePage():
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
+       '''
