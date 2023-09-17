@@ -14,4 +14,5 @@ class ProductPageLocators():
     REAL_TITLE = (By.CSS_SELECTOR, ".product_main h1")
     COST_IN_MESSAGE = (By.CSS_SELECTOR, ".alert-info .alertinner strong")
     REAL_COST = (By.CSS_SELECTOR, ".product_main .price_color")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "div.alertinner ")
 

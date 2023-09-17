@@ -19,4 +19,9 @@ class ProductPage(BasePage):
         cost_in_message = self.browser.find_element(*ProductPageLocators.COST_IN_MESSAGE).text
         real_cost = self.browser.find_element(*ProductPageLocators.REAL_COST).text
         assert cost_in_message==real_cost, "Cost doesn't match"
-    
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+           "Success message is presented, but should not be"
+    def should_disappear_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+           "Success message is presented, but should disappear"
